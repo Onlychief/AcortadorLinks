@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %} {% block titulo %} Inicio {% endblock %} {% block contenido %}
+
+<br>
+<form action="{{ url_for('elegir_opcion') }}" method="GET">
+    <div class="row">
+    <div class ="col sm-12">
+    <div class = "col sm-3"> </div>
+    <div class = "col sm-6">
+    <h3><label for="Datos">INICIO</label></h3>
+   
+    <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="{{ url_for('ingreso_usuarios') }}">Ingreso de Usuarios</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('registro_usuarios') }}">Registrar Usuario</a>
+  </li>
+  
+</ul>  
+    </div>
+    </div>
+    </div>
+</form>
+
+{% endblock %}

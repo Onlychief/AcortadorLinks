@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %} {% block titulo %} Actualizar Links {% endblock %} {% block contenido %}
+
+
+<form action="{{ url_for('actualizar_link') }}" method="PUT">
+    <div class="row">
+    <div class ="col sm-12">
+    <div class = "col sm-3"> </div>
+    <div class = "col sm-6">
+    <h3><label for="Datos">Actualización de enlaces</label></h3>
+    <table width = "100%">
+    <tr>
+    <td>Id</td>
+    <td><input type="text" size = "30" maxlength ="30" required class="form-control" id="codigo" name="codigo"></td>
+    </tr>
+    <tr>
+    <td>Nuevo Enlace</td>
+    <td><input type="text" required class="form-control" id="nuevo_enlace" name="nuevo_enlace"></td>
+    </tr>
+    <tr>
+    </tr>   
+     </table>   
+    </div>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+{% endblock %}
